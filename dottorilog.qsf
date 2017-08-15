@@ -80,15 +80,16 @@ set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity DE1_Default -s
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity DE1_Default -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -entity DE1_Default -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity DE1_Default -section_id Top
-set_global_assignment -name VERILOG_FILE ROM.v
-set_global_assignment -name VERILOG_FILE RAM.v
-set_global_assignment -name VERILOG_FILE tv80_reg.v
-set_global_assignment -name VERILOG_FILE tv80_mcode.v
-set_global_assignment -name VERILOG_FILE tv80_core.v
-set_global_assignment -name VERILOG_FILE tv80_alu.v
-set_global_assignment -name VERILOG_FILE top.v
-set_global_assignment -name VERILOG_FILE dottori.v
-set_global_assignment -name VERILOG_FILE cpu_z80.v
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_NO_OUTPUT_GND "AS INPUT TRI-STATED"
+set_global_assignment -name VERILOG_FILE verilog/tv80_reg.v
+set_global_assignment -name VERILOG_FILE verilog/tv80_mcode.v
+set_global_assignment -name VERILOG_FILE verilog/tv80_core.v
+set_global_assignment -name VERILOG_FILE verilog/tv80_alu.v
+set_global_assignment -name VERILOG_FILE verilog/top.v
+set_global_assignment -name VERILOG_FILE verilog/ROM.v
+set_global_assignment -name VERILOG_FILE verilog/RAM.v
+set_global_assignment -name VERILOG_FILE verilog/dottori.v
+set_global_assignment -name VERILOG_FILE verilog/cpu_z80.v
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
